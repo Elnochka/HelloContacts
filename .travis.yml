@@ -5,3 +5,6 @@ jdk:
 services:
   - postgresql
 script: mvn clean verify
+before_script:
+  - psql -c "create database teste2;" -U postgres
+  - pg_restore -U postgres -d postsql dumpsql.mydb
