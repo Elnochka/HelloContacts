@@ -4,4 +4,3 @@ jdk:
   - oraclejdk8
 services:
   - postgresql
-script: mvn clean verify
