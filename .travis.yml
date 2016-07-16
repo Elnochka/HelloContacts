@@ -7,4 +7,4 @@ services:
 script: mvn clean verify
 before_script:
   - psql -c "create database postsql;" -U postgres
-  - pg_restore -U postgres -d postsql postsql.backup
+  - psql -U postgres postsql < postsql.backup
